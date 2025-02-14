@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
 import Sidebar from './Components/Sidebar'
-import Navbar from './Components/Navbar'
+import Dashboard from './Components/Dashboard'
 
 const App = () => {
+  const [sidebarToggle, setSidebarToggle] = useState(false)
   return (
     <div className='flex'>
-      <Sidebar/>
-      <Navbar/>
+      <Sidebar sidebarToggle={sidebarToggle}/>
+      <Dashboard sidebarToggle={sidebarToggle}
+      setSidebarToggle={setSidebarToggle}/>
     </div>
   )
 }
