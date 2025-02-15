@@ -1,38 +1,39 @@
 import React from 'react'
+import { FaHome } from 'react-icons/fa'
 import './Sidebar.css'
 const Sidebar = ({sidebarToggle}) => {
   return (
-    <div className={`${sidebarToggle? "sidebar w-64 h-full fixed bg-gray-800 text-white py-20 text-center hidden" : "sidebar w-64 h-full fixed bg-gray-800 text-white py-20 text-center block"}`}>
-        <div>
-            <div className="navbar-navbar brand pb-15">
+    <div className={`${sidebarToggle? "sidebar w-56 h-full fixed bg-gray-800 text-white py-20 text-center overflow-y-auto hidden" : "sidebar w-56 h-full fixed bg-gray-800 text-white py-20 text-center block"}`}>
+        <div className='pr-5'>
+            <div className="navbar-navbar brand pb-10">
                 PRADORA
             </div>
             <div>
-                <h5 className='flex px-10 pb-5'>ADMIN DASHBOARD</h5>
                 <ul className=''>
-                    <li>ECCOMERCE</li>
-                    </ul>
-                <h5 className='pt-10'>PAGES</h5>   
-                <ul className='pt-5'>
-                    <li>ORDERS</li>
-                    <li>EMPLOYEES</li>
-                    <li>CUSTOMERS</li>
+                    <h5 className='pt-5'> DASHBOARD</h5>
+                    <FaHome/>
+                    <li>Homepage</li>
+                </ul>
+
+                <ul className='mx-5'>
+                <h5 className='pt-5'>LISTS</h5>   
+                    <li>Products</li>
+                    <li>Orders</li>
+                    <li>Users</li>
                     <li></li>
                     </ul> 
 
                    
-                <ul className='pt-5'>
-                <h5 className='pb-5'>APPS</h5> 
-                    <li>CALENDER</li>
-                    <li>KANBAN</li>
-                    <li>EDITOR</li>
-                    <li>COLOR</li>
+                <ul className='mx-5'>
+                <h5 className='pt-5'>GENERAL</h5> 
+                    <li>Calendar</li>
+                    <li>Elements</li>
+                    <li>Notes</li>
                 </ul>
-                <ul className='pt-5'>
-                    <h5>CHARTS</h5>
-                    <li>LINE</li>
-                    <li>BAR</li>
-                    <li>PIE</li>
+                <ul className='mx-5'>
+                    <h5 className='pt-5'>ANALYTICS</h5>
+                    <li>Charts</li>
+                    <li>Logs</li>
                 </ul>
             </div>
         </div>

@@ -1,0 +1,16 @@
+.notification{
+    position: relative;
+    display: flex;
+}
+.notification span{
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

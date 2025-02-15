@@ -1,6 +1,10 @@
 .sidebar ul li{
     margin-bottom: 10px;
 }
+.sidebar ul li:hover{
+    border-radius: 5px;
+    background-color: rgb(102, 102, 102);
+}
 .sidebar h5{
     color: grey;
 }

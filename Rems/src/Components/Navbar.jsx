@@ -6,7 +6,7 @@ const Navbar = ({sidebarToggle, setSidebarToggle}) => {
   return (
     <nav className='bg-gray-800 w-full h-20 items-center text-white d-flex fixed-top'>
       <FaBars className='text-white cursor-pointer' onClick={() => setSidebarToggle(!sidebarToggle)}/>
-      <div className="navbar navbar navbar-expand ms-auto">
+      <div className="navbar navbar navbar-expand md ms-auto">
         <div className="container ">
             <div className='navbar-nav ml-30'>
               <button><FaCalendar/></button>   
@@ -15,8 +15,8 @@ const Navbar = ({sidebarToggle, setSidebarToggle}) => {
             <div className='mr-60 ml-5'>
               <button className='w-full bg-gray-400 text-white font-semibold rounded p-1'>NEW</button>
             </div>
-            <div className='text-white mr-4 ml-30'>
-              <FaBell className='w-6 h-6'/>
+            <div className='notification text-white md:mr-4 ml-30'>
+              <FaBell className='w-6 h-6'/> <span>1</span>
             </div>
             <div>
               <button className='group'>
