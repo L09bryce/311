@@ -11,7 +11,6 @@ const App = () => {
       <Sidebar sidebarToggle={sidebarToggle}/>
       <Dashboard sidebarToggle={sidebarToggle}
       setSidebarToggle={setSidebarToggle}/>
-      <Pages/>
     </div>
   )
 }

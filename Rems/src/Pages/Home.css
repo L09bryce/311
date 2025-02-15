@@ -1,0 +1,43 @@
+.home{
+    height: 800px;
+}
+.home1{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: minmax(120px, auto);
+}
+.box{
+    background-color: rgba(173, 216, 230, 0.52);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.box-1{
+    grid-column: span 1;
+    grid-row: span 4;
+}
+.box-7{
+    grid-column: span 1;
+    grid-row: span 3;
+}
+.box-8{
+    grid-column: span 1;
+    grid-row: span 5;
+}
+.box-9{
+    grid-column: span 1;
+    grid-row: span 5;
+}
+.box-2{
+    grid-row: span 1;
+    grid-column: span 2;
+}
+.box-3{
+    grid-row: span 1;
+    grid-column: span 1;
+}
+.box-4{
+    grid-row: span 1;
+    grid-column: span 1;
+}

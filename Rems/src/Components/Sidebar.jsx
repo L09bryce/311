@@ -3,7 +3,7 @@ import { FaHome } from 'react-icons/fa'
 import './Sidebar.css'
 const Sidebar = ({sidebarToggle}) => {
   return (
-    <div className={`${sidebarToggle? "sidebar w-56 h-full fixed bg-gray-800 text-white py-20 text-center overflow-y-auto hidden" : "sidebar w-56 h-full fixed bg-gray-800 text-white py-20 text-center block"}`}>
+    <div className={`${sidebarToggle? "sidebar w-48 h-full fixed bg-gray-800 text-white py-20 text-center overflow-y-auto hidden" : "sidebar w-48 h-full fixed bg-gray-800 text-white py-20 text-center block"}`}>
         <div className='pr-5'>
             <div className="navbar-navbar brand pb-10">
                 PRADORA
