@@ -5,7 +5,7 @@ import './Navbar.css'
 const Navbar = ({sidebarToggle, setSidebarToggle}) => {
   return (
     <nav className='bg-gray-800 w-full h-20 items-center text-white d-flex'>
-      <FaBars className='text-white cursor-pointer' onClick={() => setSidebarToggle(!sidebarToggle)}/>
+      <FaBars className='text-white ml-5 cursor-pointer' onClick={() => setSidebarToggle(!sidebarToggle)}/>
       <div className="navbar navbar navbar-expand md ms-auto">
         <div className="container ">
             <div className='navbar-nav ml-30'>
