@@ -1,10 +1,10 @@
 .home{
-    height: 800px;
+    height: 700px;
 }
 .home1{
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(120px, auto);
 }
 .box{
@@ -19,19 +19,19 @@
 }
 .box-7{
     grid-column: span 1;
-    grid-row: span 3;
+    grid-row: span 2;
 }
 .box-8{
-    grid-column: span 1;
-    grid-row: span 5;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 .box-9{
     grid-column: span 1;
-    grid-row: span 5;
-}
-.box-2{
     grid-row: span 1;
-    grid-column: span 2;
+}
+.box-6{
+    grid-row: span 2;
+    grid-column: span 1;
 }
 .box-3{
     grid-row: span 1;

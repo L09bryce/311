@@ -11,8 +11,10 @@ const Sidebar = ({sidebarToggle}) => {
             <div>
                 <ul className=''>
                     <h5 className='pt-2'> DASHBOARD</h5>
+                    <div className='flex gap-1'>
                     <FaHome/>
                     <li>Homepage</li>
+                    </div>
                 </ul>
 
                 <ul className='mx-2'>
