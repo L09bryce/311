@@ -2,7 +2,7 @@ import React from 'react'
 import { FaUser } from 'react-icons/fa'
 import {Link} from 'react-dom'
 import './Chatbox.css'
-import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import {  Line, LineChart, ResponsiveContainer, Tooltip} from 'recharts'
 
 const data = [
   {
@@ -63,23 +63,14 @@ const Chatbox = () => {
             </div>
         </div>
         <div className="chartinfo">
-          <div className="chart h-72 w-72">
-          <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          width={500}
-          //height={300}
-          data={data}
-
-        >
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip contentStyle={{backgroundColor: "transparent", border: "none", color: "white"}} labelStyle={{display: "none"}}
-           />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
-      </ResponsiveContainer>
+          <div className="chart w-48">
+        <ResponsiveContainer>
+              <LineChart width={300} height={100} data={data}>
+                <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
+                <Tooltip contentStyle={{backgroundColor:"transparent", border:"none"}}
+                labelStyle={{color:"white"}}/>
+              </LineChart>
+        </ResponsiveContainer>
           </div>
         <div className="chatbox ml-10 text-lg">
           <span>
