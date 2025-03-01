@@ -6,6 +6,7 @@ import Chatbox from '../Components/Chatbox'
 import Chatbox2 from '../Components/Chatbox2'
 import Chartbox3 from '../Components/Chartbox3'
 import Chatbox4 from '../Components/Chatbox4'
+import Orders from '../Components/Analytics/Orders'
 
 const Home = () => {
   return (
@@ -30,7 +31,9 @@ const Home = () => {
             </div>
             {/* <div className="box box-8"></div> */}
             {/* <div className="box box-9">box9</div> */}
+            
         </div>
+        <Orders/>
     </div>
   )
 }
