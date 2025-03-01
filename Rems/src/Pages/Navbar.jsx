@@ -1,4 +1,3 @@
-import React from 'react'
 import {FaBars, FaCalendar, FaBell, FaUser} from 'react-icons/fa'
 import './Navbar.css'
 

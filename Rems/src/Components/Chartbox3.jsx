@@ -1,4 +1,3 @@
-import React from 'react'
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
 
 const Chartbox3 = () => {
@@ -28,7 +27,7 @@ const Chartbox3 = () => {
           dataKey="value"
         >
           {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLOR.length]} />
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
         <Pie
