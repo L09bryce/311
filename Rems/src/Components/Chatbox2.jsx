@@ -1,6 +1,7 @@
 import { Tooltip } from 'bootstrap';
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import { FaUser } from 'react-icons/fa';
+import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import { Line, LineChart, ResponsiveContainer } from 'recharts';
 
 const Chatbox2 = () => {
@@ -54,16 +55,18 @@ const Chatbox2 = () => {
 
                 <div className="textbox">
                     <div className="title flex gap-3 ">
-                    <FaUser/>
-                    <span>Total Users</span>
+                      <div className="flex">
+                      <FaShoppingCart className='mt-1'/>
+                    <span>Oders</span>
                     </div>
                     <div className='mt-15'>
                         <h2>11.284</h2>
+                      </div>
                         <button className='text-blue-100'>View all</button>
                     </div>
                 </div>
                 <div className="chartinfo">
-                  <div className="chart w-48" >coding
+                  <div className="chart w-48" >
                   <ResponsiveContainer width="100%" height="100%">
               <LineChart data={data}>
                 <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />

@@ -1,6 +1,6 @@
-import React from 'react'
+
 import { FaUser } from 'react-icons/fa'
-import {Link} from 'react-dom'
+
 import './Chatbox.css'
 import {  Line, LineChart, ResponsiveContainer, Tooltip} from 'recharts'
 
@@ -53,19 +53,19 @@ const Chatbox = () => {
   return (
     <div className='flex'>
         <div className="textbox">
-            <div className="title flex gap-3 ">
-            <FaUser/>
+            <div className="title d-flex gap-2">
+            <FaUser className='mt-1'/>
             <span>Total Users</span>
             </div>
-            <div className='mt-15'>
-                <h2>11.284</h2>
+            <div className='mt-17'>
+                <h2>15</h2>
                 <button className='text-blue-100'>View all</button>
             </div>
         </div>
         <div className="chartinfo">
-          <div className="chart w-48">
+          <div className="chart h-48 w-48">
         <ResponsiveContainer>
-              <LineChart width={300} height={100} data={data}>
+              <LineChart data={data}>
                 <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
                 <Tooltip contentStyle={{backgroundColor:"transparent", border:"none"}}
                 labelStyle={{color:"white"}}/>

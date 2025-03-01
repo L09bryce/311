@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Topbox.css'
 import { topDealUsers } from '../data'
 

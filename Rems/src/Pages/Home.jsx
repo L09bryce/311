@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import './Home.css'
 import Topbox from '../Components/Topbox'
 import Chatbox from '../Components/Chatbox'
 import Chatbox2 from '../Components/Chatbox2'
-import Chartbox3 from '../Components/Chartbox3'
+
 const Home = () => {
   return (
     <div className='home p-5  bg-gray-700 text-white w-full'>
@@ -12,14 +13,14 @@ const Home = () => {
               <Topbox/>
             </div>
             <div className="box box-2">
-              {/* <Chatbox/> */}
+              <Chatbox/>
               </div>
             <div className="box box-3">
-            <Chartbox3/>
+            {/* <Chartbox3/> */}
             </div>
             <div className="box box-4"></div>
             <div className="box box-5">
-              {/* <Chatbox2/> */}
+              <Chatbox2/>
             </div>
             <div className="box box-6"></div>
             <div className="box box-7">

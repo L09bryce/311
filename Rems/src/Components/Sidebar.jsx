@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
+import { Routes, Route } from 'react-dom'
 import { FaHome } from 'react-icons/fa'
 import './Sidebar.css'
 const Sidebar = ({sidebarToggle}) => {
@@ -6,14 +8,14 @@ const Sidebar = ({sidebarToggle}) => {
     <div className={`${sidebarToggle? "sidebar w-48  fixed bg-gray-800 text-white py-20 text-center overflow-y-auto hidden" : "sidebar w-48 h-full fixed bg-gray-800 text-white text-center overflow-y-auto block"}`}>
         <div className='my-5'>
             <div className="navbar-navbar brand">
-                PRADORA
+                PRADORA   
             </div>
             <div>
                 <ul className=''>
                     <h5 className='pt-2'> DASHBOARD</h5>
                     <div className='flex gap-1'>
                     <FaHome/>
-                    <li>Homepage</li>
+                    {/* <li><Route path='/' element={<Homepage/>}/></li> */}
                     </div>
                 </ul>
 

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import Sidebar from './Components/Sidebar'
+
 import Dashboard from './Components/Dashboard'
-import Pages from './Components/Pages'
+import Sidebar from './Components/Sidebar'
+
 
 const App = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false)
