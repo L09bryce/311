@@ -8,7 +8,7 @@ import Home from '../Pages/Home'
 
 const Dashboard = ({sidebarToggle, setSidebarToggle}) => {
   return (
-    <div className={`${sidebarToggle? "w-full" : "ml-48"}`}>
+    <div className={`${sidebarToggle? "" : "ml-48"}`}>
         <Navbar
         sidebarToggle={sidebarToggle}
         setSidebarToggle={setSidebarToggle}/>

@@ -6,49 +6,50 @@ const Orders = () => {
     const columns = [
         { field: 'id', headerName: 'ID', width: 90 },
         {
-          field: 'productName',
-          headerName: 'productName',
+          field: 'ProductName',
+          headerName: 'ProductName',
           width: 150,
           editable: true,
         },
         {
-          field: 'productCode',
-          headerName: 'productCode',
+          field: 'ProductCode',
+          headerName: 'ProductCode',
           width: 150,
           editable: true,
         },
         // {
         //   field: 'paymentstatus',
-        //   headerName: 'Payment Status',
+        //   headerName: 'Payment status',
         //   type: 'number',
         //   width: 110,
         //   editable: true,
         // },
         {
           field: 'status',
-          headerName: 'Status',
+          headerName: 'status',
           description: 'This column has a value getter and is not sortable.',
           sortable: true,
           width: 160,
-          //valueGetter: (value, row) => `${row.productCode || ''} ${row.productName || ''}`,
+          //valueGetter: (value, row) => `${row.ProductCode || ''} ${row.ProductName || ''}`,
         },
       ];
       const rows = [
-        { id: 1, productName: 'Soap', productCode: '12345', Status: 14 },
-        { id: 2, productName: 'Books', productCode: '23456', Status: 31 },
-        { id: 3, productName: 'Cooking Oil', productCode: '56467', Status: 31 },
-        { id: 4, productName: 'Mouse', productCode: '23675', Status: 11 },
-        { id: 5, productName: 'Soda', productCode: '90444', Status: null },
-        { id: 6, productName: 'Laptop', productCode: '86754', Status: 150 },
-        { id: 7, productName: 'Plate', productCode: '67903', Status: 44 },
-        { id: 8, productName: 'Spoon', productCode: '46902', Status: 36 },
-        { id: 9, productName: 'Pan', productCode: '34568', Status: 65 },
+        { id: 1, ProductName: 'Soap', ProductCode: '12345', status: 'Done' },
+        { id: 2, ProductName: 'Books', ProductCode: '23456', status: 'Declined' },
+        { id: 3, ProductName: 'Cooking Oil', ProductCode: '56467', status: 'Pending' },
+        { id: 4, ProductName: 'Mouse', ProductCode: '23675', status: 'Done' },
+        { id: 5, ProductName: 'Soda', ProductCode: '90444', status: 'Done' },
+        { id: 6, ProductName: 'Laptop', ProductCode: '86754', status: 'Pending' },
+        { id: 7, ProductName: 'Plate', ProductCode: '67903', status: 'Done' },
+        { id: 8, ProductName: 'Spoon', ProductCode: '46902', status: 'Declined' },
+        { id: 9, ProductName: 'Pan', ProductCode: '34568', status: 'Pending' },
       ];
       
 
   return (
     <div>
-      <Box sx={{ height: 400, width: '100%' }}>
+      <h4 className="text-center">ORDERS</h4>
+      <Box sx={{ height: 300, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={columns}

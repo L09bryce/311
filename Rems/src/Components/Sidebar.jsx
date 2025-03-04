@@ -1,33 +1,43 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { FaHome } from 'react-icons/fa'
+import { FaArrowDown, FaDropbox, FaHome } from 'react-icons/fa'
 import './Sidebar.css'
-import Order from '../Pages/Order'
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
+import { FaChevronDown } from 'react-icons/fa6'
 
 
 const Sidebar = ({sidebarToggle}) => {
+
+    const [open, setOpen] = useState(false);
+    const toggleDropdown = () =>{
+        setOpen((open) => !open);
+    }
+
   return (
-    <div className={`${sidebarToggle? "sidebar w-48  fixed bg-gray-800 text-white py-20 text-center overflow-y-auto hidden" : "sidebar w-48 h-full fixed cursor-pointer bg-gray-800 text-white text-center"}`}>
-        <div className="my-5">
+    <div className={`${sidebarToggle? "sidebar w-48  fixed bg-gray-800 text-white py-20 text-center overflow-y-auto hidden" : "sidebar w-48 h-full fixed bg-gray-800 text-white text-center"}`}>
+        <div className="my-5 ">
         <div className="navbar-navbar brand">
                 PRADORA   
             </div>
 
             <div>
-                <ul className=''>
+                <ul className='no-underline'>
                     <h5 className='pt-2'> DASHBOARD</h5>
                     <div className='flex gap-1'>
-                    <FaHome/>
-                    
+                    <FaHome className='mt-1'/>
+                    <li>Home</li>
                     </div>
                 </ul>
 
                 <ul>
                 <h5 className=''>LISTS</h5>   
                     <li>Products</li>
-                    <li><Link to='/orders'>Orders</Link></li>
+                    <li><Link to='/orders'>Orders</Link>
+                    <button><FaChevronDown className='ml-1'/>
+                    </button>
+                    </li>
                     <li>Users</li>
                     <li></li>
                     </ul> 

@@ -40,21 +40,22 @@ const Purchase = () => {
         },
       ];
       const rows = [
-        { id: 1, Product: 'Soap', firsName: '12345', Status: 14 },
-        { id: 2, Product: 'Books', Code: '23456', Status: 31 },
-        { id: 3, Product: 'Cooking Oil', Code: '56467', Status: 31 },
-        { id: 4, Product: 'Mouse', Code: '23675', Status: 11 },
-        { id: 5, Product: 'Soda', Code: '90444', Status: null },
-        { id: 6, Product: 'Laptop', Code: '86754', Status: 150 },
-        { id: 7, Product: 'Plate', Code: '67903', Status: 44 },
-        { id: 8, Product: 'Spoon', Code: '46902', Status: 36 },
-        { id: 9, Product: 'Pan', Code: '34568', Status: 65 },
+        { id: 1, Product: 'Soap', firsName: '12345', Status: 'Decline' },
+        { id: 2, Product: 'Books', Code: '23456', Status: 'Done' },
+        { id: 3, Product: 'Cooking Oil', Code: '56467', Status: 'Active' },
+        { id: 4, Product: 'Mouse', Code: '23675', Status: 'Done' },
+        { id: 5, Product: 'Soda', Code: '90444', Status: 'Active' },
+        { id: 6, Product: 'Laptop', Code: '86754', Status: 'Declined' },
+        { id: 7, Product: 'Plate', Code: '67903', Status: 'Pending' },
+        { id: 8, Product: 'Spoon', Code: '46902', Status: 'Done' },
+        { id: 9, Product: 'Pan', Code: '34568', Status: 'Active' },
       ];
       
 
   return (
     <div>
-      <Box sx={{ height: 400, width: '100%' }}>
+      <h4 className="text-center">PURCHASES</h4>
+      <Box sx={{ height: 300, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={columns}

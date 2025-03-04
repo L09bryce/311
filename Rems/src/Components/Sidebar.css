@@ -1,16 +1,25 @@
-/* .navbar-navbar{
-    margin-top: 20px;
-} */
-*::-webkit-scrollbar-track, *::-webkit-scrollbar-thumb{
-    width: 0;
+.sidebar ul{
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
 }
 .sidebar ul li{
     margin-bottom: 10px;
+    
 }
 .sidebar ul li:hover{
+    cursor: pointer;
     border-radius: 5px;
     background-color: rgb(102, 102, 102);
 }
 .sidebar h5{
     color: grey;
+}
+#dropdown{
+    border: none;
+    border-radius: 0px;
+    display: grid;
+}
+.sidebar select{
+    margin-left: 10px;
 }

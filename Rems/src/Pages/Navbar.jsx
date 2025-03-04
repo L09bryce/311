@@ -20,10 +20,9 @@ const Navbar = ({sidebarToggle, setSidebarToggle}) => {
               <FaBell className='w-6 h-6'/> <span>1</span>
             </div>
             <div>
-              <div></div>
               <button className='group'>
-                <FaUser className='w-6 h-6'/>
-                  <div className='z-10 rouned w-48 h-50 hidden absolute group-focus:block top-full right-0'>
+                {/* <FaUser className='w-6 h-6'/> */}
+                  <div className='z-10 rounded w-48 h-50 hidden absolute group-focus:block top-full right-0'>
                     <ul className='bg-gray-800 p-10'>
                         <li>Profile</li>
                         <li>Settings</li>

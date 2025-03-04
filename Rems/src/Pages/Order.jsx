@@ -1,10 +1,13 @@
 import Orders from "../Components/Analytics/Orders"
 import Purchase from "../Components/Analytics/Purchase"
+import Navbar from "./Navbar"
 
 
-const Order = () => {
+const Order = ({sidebarToggle, setSidebarToggle}) => {
   return (
-    <div>
+    <div className={`${sidebarToggle? "" : "ml-48"}`}>
+      <Navbar sidebarToggle={sidebarToggle}
+      setSidebarToggle={setSidebarToggle}/>
       <div className="orders">
         <Orders />
       </div>
