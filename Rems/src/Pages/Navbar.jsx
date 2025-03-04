@@ -1,6 +1,8 @@
 import {FaBars, FaCalendar, FaBell, FaUser} from 'react-icons/fa'
 import './Navbar.css'
 
+import { Link } from 'react-router-dom'
+
 const Navbar = ({sidebarToggle, setSidebarToggle}) => {
   return (
     <nav className='bg-gray-800 w-full h-20 items-center text-white d-flex'>
@@ -18,13 +20,14 @@ const Navbar = ({sidebarToggle, setSidebarToggle}) => {
               <FaBell className='w-6 h-6'/> <span>1</span>
             </div>
             <div>
+              <div></div>
               <button className='group'>
                 <FaUser className='w-6 h-6'/>
                   <div className='z-10 rouned w-48 h-50 hidden absolute group-focus:block top-full right-0'>
                     <ul className='bg-gray-800 p-10'>
                         <li>Profile</li>
                         <li>Settings</li>
-                        <li>Log out</li>
+                        <li><Link to={'/orders'} >Log out</Link></li>
                     </ul>
                   </div>
               </button>

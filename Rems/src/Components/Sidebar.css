@@ -1,7 +1,9 @@
 /* .navbar-navbar{
     margin-top: 20px;
 } */
-
+*::-webkit-scrollbar-track, *::-webkit-scrollbar-thumb{
+    width: 0;
+}
 .sidebar ul li{
     margin-bottom: 10px;
 }

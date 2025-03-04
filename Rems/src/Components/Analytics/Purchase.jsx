@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import { DataGrid } from "@mui/x-data-grid"
 
-const Orders = () => {
+const Purchase = () => {
     const columns = [
         { field: 'id', headerName: 'ID', width: 90 },
         {
@@ -74,4 +74,4 @@ const Orders = () => {
   )
 }
 
-export default Orders
+export default Purchase

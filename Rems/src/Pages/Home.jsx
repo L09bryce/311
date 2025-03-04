@@ -33,7 +33,6 @@ const Home = () => {
             {/* <div className="box box-9">box9</div> */}
             
         </div>
-        <Orders/>
     </div>
   )
 }
