@@ -12,7 +12,7 @@ const Dashboard = ({sidebarToggle, setSidebarToggle}) => {
         <Navbar
         sidebarToggle={sidebarToggle}
         setSidebarToggle={setSidebarToggle}/>
-        <Home/>
+        <Home />
     </div>
   )
 }

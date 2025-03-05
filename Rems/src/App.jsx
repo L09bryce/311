@@ -6,6 +6,8 @@ import {Routes,Route} from 'react-router-dom'
 import Dashboard from './Components/Dashboard'
 import Sidebar from './Components/Sidebar'
 import Order from './Pages/Order'
+import Analytics from './Components/Analytics/Analytics'
+//import Home from './Pages/Home'
 
 const App = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false)
@@ -14,8 +16,10 @@ const App = () => {
        <Sidebar sidebarToggle={sidebarToggle}/>
         <Routes>
           <Route path='/' element={<Dashboard sidebarToggle={sidebarToggle}
-      setSidebarToggle={setSidebarToggle}/>}/>
+      setSidebarToggle={setSidebarToggle}/>}/> 
+          {/* <Route path ='/' element={<Home/>}/> */}
           <Route path='/orders' element={<Order />}/>
+          <Route path ='/analysis' element={<Analytics />}/>
         </Routes>
       
     </div>

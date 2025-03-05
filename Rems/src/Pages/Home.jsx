@@ -7,6 +7,8 @@ import Chatbox2 from '../Components/Chatbox2'
 import Chartbox3 from '../Components/Chartbox3'
 import Chatbox4 from '../Components/Chatbox4'
 import Orders from '../Components/Analytics/Orders'
+import Dashboard from '../Components/Dashboard'
+import Navbar from './Navbar'
 
 const Home = () => {
   return (

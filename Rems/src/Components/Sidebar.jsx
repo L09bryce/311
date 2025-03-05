@@ -10,11 +10,6 @@ import { FaChevronDown } from 'react-icons/fa6'
 
 const Sidebar = ({sidebarToggle}) => {
 
-    const [open, setOpen] = useState(false);
-    const toggleDropdown = () =>{
-        setOpen((open) => !open);
-    }
-
   return (
     <div className={`${sidebarToggle? "sidebar w-48  fixed bg-gray-800 text-white py-20 text-center overflow-y-auto hidden" : "sidebar w-48 h-full fixed bg-gray-800 text-white text-center"}`}>
         <div className="my-5 ">
@@ -52,7 +47,7 @@ const Sidebar = ({sidebarToggle}) => {
                 <ul>
                     <h5 className='pt-2'>ANALYTICS</h5>
                     <li>Charts</li>
-                    <li>Logs</li>
+                    <li><Link to='/analysis'>Analysis</Link></li>
                 </ul>
             </div>
         <div className=''>
