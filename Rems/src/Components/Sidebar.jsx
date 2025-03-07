@@ -28,7 +28,7 @@ const Sidebar = ({sidebarToggle}) => {
 
                 <ul>
                 <h5 className=''>LISTS</h5>   
-                    <li>Products</li>
+                    <li><Link to='/products'>Products</Link></li>
                     <li><Link to='/orders'>Orders</Link>
                     <button><FaChevronDown className='ml-1'/>
                     </button>

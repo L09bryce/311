@@ -7,6 +7,7 @@ import Dashboard from './Components/Dashboard'
 import Sidebar from './Components/Sidebar'
 import Order from './Pages/Order'
 import Analytics from './Components/Analytics/Analytics'
+import Products from './Components/Products'
 //import Home from './Pages/Home'
 
 const App = () => {
@@ -17,9 +18,10 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Dashboard sidebarToggle={sidebarToggle}
       setSidebarToggle={setSidebarToggle}/>}/> 
-          {/* <Route path ='/' element={<Home/>}/> */}
+          {/* <Route path ='/products' element={<Products/>}/> */}
           <Route path='/orders' element={<Order />}/>
           <Route path ='/analysis' element={<Analytics />}/>
+          <Route path='/products' element={<Products />}/>
         </Routes>
       
     </div>
