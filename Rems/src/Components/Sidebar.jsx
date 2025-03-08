@@ -22,7 +22,7 @@ const Sidebar = ({sidebarToggle}) => {
                     <h5 className='pt-2'> DASHBOARD</h5>
                     <div className='flex gap-1'>
                     <FaHome className='mt-1'/>
-                    <li>Home</li>
+                    <li>Homes</li>
                     </div>
                 </ul>
 
