@@ -33,7 +33,7 @@ const Sidebar = ({sidebarToggle}) => {
                     <button><FaChevronDown className='ml-1'/>
                     </button>
                     </li>
-                    <li>Users</li>
+                    <li><Link to='/users'>Users</Link></li>
                     <li></li>
                     </ul> 
 
