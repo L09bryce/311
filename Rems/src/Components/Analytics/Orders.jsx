@@ -1,6 +1,7 @@
 
 import { Box } from "@mui/material"
 import { DataGrid } from "@mui/x-data-grid"
+import { useEffect, useState } from "react";
 
 const Orders = () => {
     const columns = [
@@ -44,14 +45,29 @@ const Orders = () => {
         { id: 8, ProductName: 'Spoon', ProductCode: '46902', status: 'Declined' },
         { id: 9, ProductName: 'Pan', ProductCode: '34568', status: 'Pending' },
       ];
+
+       const [orders,setOrders] = useState(null)
+      
+            useEffect(()=>{
+              const endpoint = 'http://127.0.0.1:8000/api/Orders' 
+      
+              fetch(endpoint).then((response)=>{
+                return response.json()
+              }).then(data =>{
+                setOrders(data)
+                console.log(data);
+                
+              }
+              )
+            },[])
       
 
   return (
     <div>
       <h4 className="text-center">ORDERS</h4>
       <Box sx={{ height: 300, width: '100%' }}>
-      <DataGrid
-        rows={rows}
+      {orders &&<DataGrid
+        rows={orders}
         columns={columns}
         initialState={{
           pagination: {
@@ -63,7 +79,7 @@ const Orders = () => {
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
-      />
+      />}
     </Box>
     </div>
   )

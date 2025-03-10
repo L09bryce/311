@@ -9,6 +9,7 @@ import Order from './Pages/Order'
 import Analytics from './Components/Analytics/Analytics'
 import Products from './Components/Products'
 import Users from './Pages/Users'
+import Settings from './Pages/Users/Settings'
 //import Home from './Pages/Home'
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route path ='/analysis' element={<Analytics />}/>
           <Route path='/products' element={<Products />}/>
           <Route path='/users' element={<Users/>}/>
+          <Route path='/settings' element={<Settings />} />
         </Routes>
       
     </div>
