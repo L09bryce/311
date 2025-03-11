@@ -80,18 +80,10 @@ const Products = ({sidebarToggle, setSidebarToggle}) => {
       <Navbar sidebarToggle={sidebarToggle}
       setSidebarToggle={setSidebarToggle}/>
          <h4 className="text-center">PRODUCTS</h4>
-      <Box sx={{ height: 550, width: '100%' }}>
+      <Box sx={{ height: 750, width: '100%' }}>
       {products && <DataGrid
         rows={products}
         columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: 5,
-            },
-          },
-        }}
-        pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
       />}

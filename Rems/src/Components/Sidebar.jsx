@@ -42,7 +42,7 @@ const Sidebar = ({sidebarToggle}) => {
                 <h5 className='pt-2'>GENERAL</h5> 
                     <li>Calendar</li>
                     <li>Elements</li>
-                    <li><Link to='/settings'>Setting</Link></li>
+                    {/* <li><Link to='/settings'>Setting</Link></li> */}
                 </ul>
                 <ul>
                     <h5 className='pt-2'>ANALYTICS</h5>
