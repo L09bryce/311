@@ -1,5 +1,5 @@
 //import React from 'react'
-import { IoMdSettings } from 'react-icons/io'
+import { IoMdPhonePortrait, IoMdSettings } from 'react-icons/io'
 import Navbar from '../Navbar'
 import './Settings.css'
 import {  FaRegUserCircle } from 'react-icons/fa'
@@ -25,7 +25,7 @@ const Settings = ({sidebarToggle, setSidebarToggle}) => {
         <div>
           <ul>
             <li className='d-flex'><MdMail className='mt-1 mx-0.5' /><Link to='/email'>Email Address</Link></li>
-            <li>Change Number</li>
+            <li className='d-flex'><IoMdPhonePortrait className='mt-1'/><Link to='/number'>Number</Link></li>
           </ul>
         </div>
         <div>

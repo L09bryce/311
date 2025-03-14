@@ -84,6 +84,14 @@ const Products = ({sidebarToggle, setSidebarToggle}) => {
       {products && <DataGrid
         rows={products}
         columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 10,
+            },
+          },
+        }}
+        pageSizeOptions={[10]}
         checkboxSelection
         disableRowSelectionOnClick
       />}
