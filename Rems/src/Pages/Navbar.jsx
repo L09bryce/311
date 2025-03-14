@@ -25,7 +25,7 @@ const Navbar = ({sidebarToggle, setSidebarToggle}) => {
                   <div className='z-10 rounded w-48 h-50 hidden absolute group-focus:block top-full right-0'>
                     <ul className='bg-gray-800 p-10'>
                         <li>Profile</li>
-                        <li><Link to='/settings'>Settings</Link></li>
+                        {/* <li><Link to='/settings'>Settings</Link></li> */}
                         <li>Log out</li>
                     </ul>
                   </div>
