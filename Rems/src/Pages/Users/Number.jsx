@@ -17,9 +17,15 @@ const Number = ({sidebarToggle, setSidebarTogle}) => {
             </div>
             <div>
               <div>
-                <p>Enter your old phone number starting with the country code</p>
+                <p>Your old phone number is</p>
                 <form action="PUT">
-                  <input className='underline' type="number" placeholder='+254 7123456' />
+                  <input className='underline' type="text" placeholder='+254  7123456' />
+                </form>
+              </div>
+              <div>
+                <p>Enter your new phone number starting with the country code</p>
+                <form action="PUT">
+                  <input className='underline' type="text" placeholder='+254  7123456' />
                 </form>
               </div>
             </div>
