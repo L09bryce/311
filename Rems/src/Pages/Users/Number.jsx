@@ -15,6 +15,14 @@ const Number = ({sidebarToggle, setSidebarTogle}) => {
                 <p>Before proceeding, please confirm that you are able to receive SMS or calls at your new number.</p>
                 <p>If you have both a new phone or a new number, first change your number on your old phone.</p>
             </div>
+            <div>
+              <div>
+                <p>Enter your old phone number starting with the country code</p>
+                <form action="PUT">
+                  <input className='underline' type="number" placeholder='+254 7123456' />
+                </form>
+              </div>
+            </div>
         </div>
     </div>
   )
