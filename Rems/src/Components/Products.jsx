@@ -35,20 +35,18 @@ const Products = ({sidebarToggle, setSidebarToggle}) => {
           field: 'category',
           headerName: 'Category',
           type: 'number',
-          width: 110,
+          width: 90,
           editable: true,
         },
         {
-          field: 'sellPrice',
+          field: 'sell_price',
           headerName: 'Sell Price',
-          description: 'This column has a value getter and is not sortable.',
           sortable: true,
           width: 160,
-          //valueGetter: (value, row) => `${row.ProductCode || ''} ${row.ProductName || ''}`,
         },
       ];
       // const rows = [ 
-      //   { id: 5, ProductName: 'Soap', unitsAvailable: '12345',productImage: 'Done', category: 'Educational', sellPrice: 1500 },
+      //{ id: 5, ProductName: 'Soap', unitsAvailable: '12345',productImage: 'Done', category: 'Educational', sellPrice: 1500 },
       //   { id: 2, ProductName: 'Books', ProductCode: '23456', status: 'Declined' },
       //   { id: 3, ProductName: 'Cooking Oil', ProductCode: '56467', status: 'Pending' },
       //   { id: 4, ProductName: 'Mouse', ProductCode: '23675', status: 'Done' },
