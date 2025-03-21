@@ -1,7 +1,7 @@
 import  { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 
-import {Routes,Route} from 'react-router-dom'
+import {Routes,Route,Outlet} from 'react-router-dom'
 
 import Dashboard from './Components/Dashboard'
 import Sidebar from './Components/Sidebar'
@@ -12,6 +12,8 @@ import Users from './Pages/Users'
 import Settings from './Pages/Users/Settings'
 import Email from './Pages/Users/Email'
 import Number from './Pages/Users/Number'
+//import Login from './LoginPage/Login'
+import Home from './Pages/Home'
 //import Home from './Pages/Home'
 
 const App = () => {
@@ -19,17 +21,23 @@ const App = () => {
   return (
     <div className=''>
        <Sidebar sidebarToggle={sidebarToggle}/>
+       
         <Routes>
-          <Route path='/' element={<Dashboard sidebarToggle={sidebarToggle}
-      setSidebarToggle={setSidebarToggle}/>}/> 
-          {/* <Route path ='/products' element={<Products/>}/> */}
-          <Route path='/orders' element={<Order />}/>
-          <Route path ='/analysis' element={<Analytics />}/>
-          <Route path='/products' element={<Products />}/>
+          {/* <Route path='/' element={<Dashboard sidebarToggle={sidebarToggle}
+      setSidebarToggle={setSidebarToggle}/>}/>  */}
+          <Route path='/orders' element={<Order sidebarToggle={sidebarToggle}
+      setSidebarToggle={setSidebarToggle}/>}/>
+          <Route path ='/analysis' element={<Analytics sidebarToggle={sidebarToggle}
+      setSidebarToggle={setSidebarToggle}/>}/>
+          <Route path='/products' element={<Products sidebarToggle={sidebarToggle}
+      setSidebarToggle={setSidebarToggle}/>}/>
           <Route path='/users' element={<Users/>}/>
           <Route path='/settings' element={<Settings />} />
           <Route path='/email' element={<Email />} />
           <Route path='/number' element={<Number />} />
+          {/* <Route path='/login' element={<Login />} /> */}
+          <Route path='/home' element={<Home sidebarToggle={sidebarToggle}
+      setSidebarToggle={setSidebarToggle}/>} />
         </Routes>
       
     </div>

@@ -10,8 +10,12 @@ import Orders from '../Components/Analytics/Orders'
 import Dashboard from '../Components/Dashboard'
 import Navbar from './Navbar'
 
-const Home = () => {
+const Home = ({sidebarToggle, setSidebarToggle}) => {
   return (
+    <div className={`${sidebarToggle? "" : "ml-48"}`}>
+      <Navbar
+              sidebarToggle={sidebarToggle}
+              setSidebarToggle={setSidebarToggle}/>
     <div className='home p-5  bg-gray-700 text-white w-full overflow-y-hidden'>
         <div className='home1'>
             <div className="box box-1">
@@ -35,6 +39,7 @@ const Home = () => {
             {/* <div className="box box-9">box9</div> */}
             
         </div>
+    </div>
     </div>
   )
 }
