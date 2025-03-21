@@ -9,10 +9,7 @@ const Login = () => {
         <div className="large">
         <div className="login-container">
           <div className="facebook">
-            <h1>Facebook</h1>
-            <p>
-              Facebook helps you connect and share with the people in your life
-            </p>
+            <h1>PRADORA</h1>
           </div>
 
           <div className="login">
