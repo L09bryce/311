@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 
-import { Routes, Route, Outlet } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
-import Dashboard from './Components/Dashboard'
-import Sidebar from './Components/Sidebar'
+
 import Order from './Pages/Order'
 import Analytics from './Components/Analytics/Analytics'
 import Products from './Components/Products'
