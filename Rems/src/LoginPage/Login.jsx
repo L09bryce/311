@@ -5,29 +5,21 @@ import './Login.css'
 const Login = () => {
    
   return (
-    <div className='login'>
-        <div className="large">
-        <div className="login-container">
-          <div className="facebook">
+    <div className='login  p-40 flex'>
+        <div>
             <h1>PRADORA</h1>
           </div>
 
-          <div className="login">
-            <form action="#" method='POST'>
-              <input type="text" placeholder='Email address or Phone number' name='credential' id='credential' /> <br />
-              <input type="password" name="passsword" id="password" placeholder='Password' /> <br />
-              <Link to={'/login'} >
-                <input type="submit" id='sbmt' value="Log in" />
-              </Link>
-              <a href='#'> Forgotten password? </a>
+          <div className="credentials ml-50">
+            <form action="PUT">
+              <input type='text' placeholder='EnterUsername or Email' name='username' className='border-2 border-r-15 w-64'/>
+              <input type='password' name='password' placeholder='Password' className='mt-20 border-2 w-64'/><br />
+              <button className='text-blue-600 btn2'>or forgot Password?</button>
+              <button className='btn1 text-white'>Login</button><br />
+              
+              <button className='btn3 text-white'>Create Account</button>
             </form>
-            <hr />
-            <button>
-            Create new account
-            </button>
           </div>
-        </div>
-      </div>
 
     </div>
   )
