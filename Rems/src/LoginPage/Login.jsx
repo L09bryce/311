@@ -1,5 +1,5 @@
 //import React from 'react'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import './Login.css'
 
 const Login = () => {
@@ -17,7 +17,7 @@ const Login = () => {
               <button className='text-blue-600 btn2'>or forgot Password?</button>
               <button className='btn1 text-white'>Login</button><br />
               
-              <button className='btn3 text-white'>Create Account</button>
+              <button className='btn3 text-green-600'>Create Account</button>
             </form>
           </div>
 
