@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 import Topbox from '../Components/Topbox'
 import Chatbox from '../Components/Chatbox'
@@ -9,8 +9,13 @@ import Chatbox4 from '../Components/Chatbox4'
 import Orders from '../Components/Analytics/Orders'
 import Dashboard from '../Components/Dashboard'
 import Navbar from './Navbar'
+import axios from 'axios'
 
 const Home = ({sidebarToggle, setSidebarToggle}) => {
+  const [user, setUser] = useState(null);
+  const [username, setUsername] = useState("");
+
+
   return (
     <div className={`${sidebarToggle? "" : "ml-48"}`}>
       <Navbar
@@ -18,6 +23,7 @@ const Home = ({sidebarToggle, setSidebarToggle}) => {
               setSidebarToggle={setSidebarToggle}/>
     <div className='home p-5  bg-gray-700 text-white w-full overflow-y-hidden'>
         <div className='home1'>
+          {/* <span>Welcome to the Dashboard{" "} <b>{user.username}</b></span> */}
             <div className="box box-1">
               <Topbox/>
             </div>

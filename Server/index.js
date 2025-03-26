@@ -3,6 +3,7 @@ const app = express();
 const jwt = require("jsonwebtoken");
 app.use(express.json())
 
+
 const users = [
     {
         id: "1",
@@ -45,24 +46,26 @@ const generateRefreshToken = (user) => {
 )};
 
 //login route
-app.post("/api/login", (req,res) => {
-    const {username, password} =req.body;
-    const user = users.find(u => {
-        return u.username === username && u.password === password
+app.post("/api/login", (req, res) => {
+    const { username, password } = req.body;
+    const user = users.find((u) => {
+      return u.username === username && u.password === password;
     });
-    if(user){
-        //Generate accesstokens
-        const accessToken = generateAccessToken(user)
-        const refreshToken = generateRefreshToken(user)
-        refreshTokens.push(refreshToken)
-        res.json({
-            user: user.username,
-            accessToken,
-        })
-    }else{
-        res.status(400).json("User or Password invalid!")
-    }   
-});
+    if (user) {
+      //Generate an access token
+      const accessToken = generateAccessToken(user);
+      const refreshToken = generateRefreshToken(user);
+      refreshTokens.push(refreshToken);
+      res.json({
+        username: user.username,
+        accessToken,
+        refreshToken,
+      });
+    } else {
+      res.status(400).json("Username or password incorrect!");
+    }
+  });
+  
 
 const verify = (req, res, next) => {
     const authHeader = req.headers.authorization;
@@ -83,7 +86,7 @@ const verify = (req, res, next) => {
 
 app.post("/api/logout", verify, (req, res) =>{
     const refreshToken = req.body.token;
-    refreshTokens = refreshTokens.filter(token !== refreshToken);
+    refreshTokens = refreshTokens.filter((token)=> token !== refreshToken);
     res.status(200).json("Logged out successful")
 });
 
