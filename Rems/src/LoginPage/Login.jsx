@@ -1,76 +1,51 @@
 //import React from 'react'
-//import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './Login.css'
-import { data } from 'react-router-dom';
-
 
 const Login = () => {
- 
-  const [username, setUsername] = useState("");
-  const [password, setPassword]= useState("");
+  //const [user, setUser] = useState(null);
+  const [username, setUsername] = useState();
+  const [password, setPassword]= useState();
+  const navigate = useNavigate();
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+      await axios.post("http://localhost:5000/api/login", { username, password })
+      .then(result => 
+      {console.log(result)
+        navigate('/home')
+      }
+      ).catch (err =>
+      console.log(err));
 
-  const [user, setUser] = useState(null);
-  // useEffect(() =>{
-  //   fetch("/login", {username, password}).then(
-  //     res => res.json()
-  //   ).then(
-  //     data => {
-  //       setUser(data)
-  //     }
-  //   )
-  // })
-  
-
-  const handleSubmit =  () => {
-    // e.preventDefault();
-    // try {
-    //   const res = await axios.post("/login", { username, password });
-    //   setUser(res.data);
-    // } catch (err) {
-    //   console.log(err);
-    // }
+    
   };
    
   return (
-    <div className="container">
-    {user ? (
-      <div className="home">
-        <span>
-          Welcome to the dashboard
-          <b>{user.username}</b>.
-        </span>
-        <span>Delete Users:</span>
-        <button className="deleteButton">
-          Delete John
-        </button>
-        <button className="deleteButton">
-          Delete Jane
-        </button>
-      </div>
-    ) : (
-      <div className="login">
-        <form onSubmit={handleSubmit}>
-          <span className="formTitle">Lama Login</span>
-          <input
-            type="text"
-            placeholder="username"
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit" className="submitButton">
-            Login
-          </button>
-        </form>
-      </div>
-    )}
-  </div>
+    <div className='login  p-30 flex'>
+        <div>
+            <h1 className='pt-15 ml-30'>PRADORA</h1>
+          </div>
+
+          <div className="credentials ml-50">
+            <form onSubmit={handleSubmit}>
+              <h4>Login </h4>
+              <input type='text' placeholder='EnterUsername or Email' name='name' className='p-0.5 mx-4 border-1 w-48'
+              onChange={(e) => setUsername(e.target.value)}
+              />
+              <input type='password' 
+              name='password' 
+              placeholder='Password' 
+              className='p-0.5 mx-4 mt-20 border-1 w-48'
+              onChange={(e) => setPassword(e.target.value)}/><br />
+              <button className='btn1 text-white'>Login</button><br />
+            </form>
+          </div>
+          <input />
+
+    </div>
   )
 }
 
